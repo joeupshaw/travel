@@ -1,0 +1,21 @@
+<h1>Welcome to my Travel Site</h1>
+<p>This is my awesome travel site</p>
+
+<p>I'm from <%= @homeland %> </p>
+
+<ul>
+	<% @countries.each do |country| %>
+		<li><%= country %></li>
+	<% end %>
+</ul>
+
+<%= image_tag 'boom.png', 
+	alt: "Boom Boom Baby", 
+	id: "boomButton", 
+	class: "buttons",
+	width: "256px" %>
+
+<div id="images">
+<% @pics.each do |pic| %>
+	<%= image_tag pic, width: "300px", class: "img-responsive" %>
+<% end %>

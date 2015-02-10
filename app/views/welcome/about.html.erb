@@ -1,0 +1,26 @@
+<style>
+body
+{
+	background: <%= @color %>;
+}
+</style>
+
+<h1>ABout All</h1>
+<p>Ab Out - Out of nothingness</p>
+<p> My Favorite Color is <%= @color %></p>
+
+<% if ( @shoe_size > 12 ) %>
+	<p>Bigfoot Walks Among Us</p>
+<% elsif ( @shoe_size < 5 ) %>
+	<p>A Japanese Princess Walks Among Us</p>
+<% else %>
+	<p>You're soooo normal</p>
+<% end %>
+
+<%= link_to "Blue", 
+	{ controller: "welcome", action: "about", color: "blue" }, 
+	class: "btn btn-primary" %>
+
+<%= link_to "Red", 
+	{ controller: "welcome", action: "about", color: "red" }, 
+	class: "btn btn-danger" %>
